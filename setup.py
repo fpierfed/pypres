@@ -1,23 +1,13 @@
-import re
 from distutils.core import setup
+from pypres import __version__
 
-
-VERSION_FILE = "pypres/_version.py"
-verstrline = open(VERSION_FILE, "rt").read()
-VSRE = r'^__version__ = [\'"]([^\'"]*)[\'"]$'
-mo = re.search(VSRE,  verstrline, re.M)
-if mo:
-    VERSION = mo.group(1)
-else:
-    raise RuntimeError("Unable to find version string in {0}"
-                       .format(VERSION_FILE))
 
 LONG_DESC = """
 Make Python related presentations in a Python Repl!
 """
 setup(
     name="pypres",
-    version=VERSION,
+    version=__version__,
     author="David Miller",
     author_email="david@deadpansincerity.com",
     url="https://github.com/davidmiller/pypres",
@@ -41,5 +31,4 @@ setup(
         "Topic :: Utilities"
         ],
     packages=['pypres'],
-    install_requires=[]
     )

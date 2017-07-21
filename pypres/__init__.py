@@ -7,6 +7,7 @@ import sys
 
 from pypres.pres import PresentConsole
 from pypres.timer import countdown
+from ._version import __version__
 
 
 def main():
