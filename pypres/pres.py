@@ -2,7 +2,6 @@
 A presentation about Python!
 """
 import code
-import os
 import sys
 import time
 
@@ -86,7 +85,8 @@ class PresentConsole(code.InteractiveConsole):
         """
         if self._slidenum >= len(self.slides):
             return
-        os.system('clear')
+        # Clear the screen
+        print("\x1b[2J\x1b[H")
         if line.strip() == "^":
             return self.prevslide()
         else:
