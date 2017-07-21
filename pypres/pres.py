@@ -6,6 +6,7 @@ import os
 import sys
 import time
 
+
 class PresentConsole(code.InteractiveConsole):
     """
     A console that models the Python interpreter except...
@@ -89,7 +90,7 @@ class PresentConsole(code.InteractiveConsole):
         if line.strip() == "^":
             return self.prevslide()
         else:
-            slide =  self.slides[self._slidenum].strip()
+            slide = self.slides[self._slidenum].strip()
             self._slidenum += 1
         self.statusing()
         if slide.startswith("#--code"):
