@@ -7,7 +7,9 @@ import sys
 
 from pypres.pres import PresentConsole
 from pypres.timer import countdown
-from ._version import __version__
+
+
+__version__ = "0.0.1"
 
 
 def main():
